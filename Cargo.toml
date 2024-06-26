@@ -2,6 +2,7 @@
 name = "Horizon"
 version = "0.1.0"
 edition = "2021"
+build = "build.rs"
 
 [dependencies]
 axum = { version = "0.7.5", features = ["tokio", "http1"] }
@@ -18,3 +19,13 @@ viz = "0.8.4"
 bincode = "1.3.3"
 ansi_term = "0.12.1"
 TerraForge = "0.1.0"
+monoio = { version = "0.2", features = ["sync"] }
+tokio-console = "0.1.11"
+console-subscriber = "0.3.0"
+PebbleVault = { path = "./PebbleVault" }
+bindgen = "0.69.4"
+
+[[bin]]
+name = "horizon"
+path = "src/main.rs"
+
